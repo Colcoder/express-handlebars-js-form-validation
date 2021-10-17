@@ -1,0 +1,81 @@
+body{
+  font-family:sans-serif ;
+  text-align: center;
+}
+
+
+form{
+    display: block;
+    padding: 2rem;
+    text-align: left;
+    width: 50%;
+}
+
+label{
+    display: block;
+    margin-bottom: 0.2rem;
+    margin-top: 2rem;
+}
+
+input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8em;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 3px rgb(92, 241, 192);
+    padding-top: 0.5rem;
+    box-shadow:rgb(92, 241, 192) ;  
+    margin-bottom: 1.5 rem; 
+}
+
+#message{
+    border:solid 2px rgb(92, 241, 192) ;
+    border-radius: 00.4em;
+}
+
+.submit-button{
+    display: block;
+    padding:0.8rem 2rem;
+    width: 4cm;
+    margin: 3rem;
+    background-color: rgb(92, 241, 192);
+    border-radius: 5rem ;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 2rem;
+    color: white;
+}
+
+
+.submit-button:hover{
+    background-color: gray;
+}
+
+/*login styling*/
+
+#submit{
+    border: none;
+    background: gray;
+    font-size: x-large;
+    cursor: pointer;
+}
+
+#submit:hover{
+    background-color: rgb(92, 241, 192) ;
+
+}
+
+#form_id{
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#password{
+    margin-bottom: 1rem;
+}

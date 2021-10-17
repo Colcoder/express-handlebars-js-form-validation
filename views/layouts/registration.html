@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="./index.css"/>
+    
+</head>
+<body>
+    <div id="error"></div>
+    <form id="form" method="get" action="/">
+                          
+        <label for="First name">First name</label>
+        <input type="text" id="first-name" name="First name" />
+
+        <label for="Second name">Second name</label>
+        <input type="text" id="second-name" name="Second name"/>
+      
+
+         <label for="Email">Email</label>
+         <input type="email" id="Email" name="Email"/>
+
+         <button type="submit" class="submit-button">SUBMIT</button>
+     </form>
+     <script>
+         const firstName = document.getElementById('first-name');
+const secondName = document.getElementById('second-name');
+const email = document.getElementById('Email');
+const form = document.getElementById('form');
+const errorElement = document.getElementById('error')
+
+
+form.addEventListener('submit',(e)=>{
+    
+
+    let messages = []
+    if (firstName.value === ''|| firstName.value==null){
+        messages.push('First name is required')
+    }
+
+    if(secondName.value=== ''|| secondName.value==null){
+        messages.push('Second name is required')
+    }
+    
+    if(email.value.length <= 10){
+        messages.push('E-mail should not be less than 10 characters')
+    }
+
+    if(messages.length>0){
+        e.preventDefault()
+        errorElement.innerText = messages.join(',')
+    }
+
+    
+})
+     </script>
+</body>
+</html>

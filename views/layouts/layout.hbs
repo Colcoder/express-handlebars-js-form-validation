@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="./index.css">
+  
+  
+
+</head>
+<body>
+  {{{body}}}
+ 
+
+ <script>
+    const  userName = document.getElementById('username');
+ const  password = document.getElementById('password');
+ const  form = document.getElementById('form_id');
+ const  errorElement= document.getElementById('error');
+
+ form.addEventListener('submit',(e)=>{
+    
+    let messages = []
+    if (userName.value=== ''|| userName.value==null){
+        messages.push('Username is required')
+    }
+
+    if(password.value.length <=6){
+        messages.push('Password must be longer than six characters')
+    }
+
+    if(password.value.length >= 20){
+        messages.push('Password must be less than 20 characters')
+    }
+
+    if(messages.length > 0){
+        e.preventDefault()
+        errorElement.innerText = messages.join(',')
+    }
+   
+})
+ </script>
+</body>
+</html>
